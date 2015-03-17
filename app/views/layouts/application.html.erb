@@ -24,7 +24,21 @@
 	<hr />
 	<br class="clear" />
 
-<%= yield %>
+<div class="container">
+	<%= yield %>
+</div>
+
+<div class="footer">
+	<div class="container">
+			<div class="col-xs-6">
+				<%= link_to "Show me another.", "#", :class => 'next-quote' %>
+			</div>
+			<div class="col-xs-6 footer-blurb">
+				A quick project by <a href="http://1amongmany.com">Danny Nathan</a>.<br />
+				Something else interesting or witty might go here.
+			</div>
+	</div>
+</div>
 
 </body>
 </html>
