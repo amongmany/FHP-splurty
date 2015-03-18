@@ -1,0 +1,10 @@
+<p>(We'll automatically begin your entry with <i>"You know you work at a startup when..."</i>.)</p>
+<br />
+<%= simple_form_for @quote do |f| %>
+	<%= f.input :saying, label: 'Share Your Startup Wisdom:' %>
+	<br />
+	<%= f.input :author, label: 'Your Name (or submit as "Anonymous"):' %>
+	<br />
+	<%= f.submit 'Create', :class => 'btn btn-danger' %>
+	<%= link_to 'Cancel', root_path, :class => 'btn btn-default' %>
+<% end %>
