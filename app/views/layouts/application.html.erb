@@ -21,6 +21,32 @@
 			<%= link_to 'About', '#' %>
 		</div> -->
 	</header>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Share your startup wisdom.</h4>
+        </div>
+        <%= simple_form_for Quote.new do |f| %>
+        <div class="modal-body">
+			<%= f.input :saying, label: 'You Know You Work at a Startup When...', placeholder: 'you function on 5 or less hours sleep, daily.' %>
+			<br />
+			<%= f.input :author, label: 'Your Name:', placeholder: 'or simply type, "Anonymous."' %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit 'Submit', :class => 'btn btn-danger' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 	<br class="clear" />
 
 <div class="container">
@@ -45,8 +71,9 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= link_to 'Contribute', new_quote_path, :class => 'btn btn-primary btn-lg btn-block' %>
+				<%= link_to 'Contribute', new_quote_path, :class => 'btn btn-primary btn-lg btn-block', :data => {:toggle => 'modal', :target => '#myModal'} %>
 			</div>
+
 		</div>	
 			<div class="col-md-8 col-md-offset-2 slogan">
 				<p>A humorously insightful look at the up-start moments of the startup world.</p>
