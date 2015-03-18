@@ -34,7 +34,7 @@
         </div>
         <%= simple_form_for Quote.new do |f| %>
         <div class="modal-body">
-			<%= f.input :saying, label: 'You Know You Work at a Startup When...', placeholder: 'you function on 5 or less hours sleep, daily.' %>
+			<%= f.input :saying, label: 'You Know You Work at a Startup When...', placeholder: 'you function on 5 or less hours of sleep, daily.' %>
 			<br />
 			<%= f.input :author, label: 'Your Name:', placeholder: 'or simply type, "Anonymous."' %>
         </div>
@@ -56,9 +56,9 @@
 		</div>
 	<% end %>
 	
-	<div class="headline">
+	<!--<div class="headline">
 		You know you work at a startup when...
-	</div>
+	</div>-->
 	
 	<%= yield %>
 </div>
