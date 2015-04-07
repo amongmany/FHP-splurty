@@ -1,9 +1,8 @@
 class QuotesController < ApplicationController
 	def index
 		@quote = Quote.order("RANDOM()").first
+
 	end
-
-
 
 	def create
 		@quote = Quote.create(quote_params)
@@ -13,12 +12,20 @@ class QuotesController < ApplicationController
 		redirect_to root_path
 	end
 
+	def show
+		@quote = Quote.find(params[:id])
+	end
+
 	def about
 	end
 
+
 	private
+
 
 	def quote_params
 		params.require(:quote).permit(:saying, :author)
 	end
+
+
 end
