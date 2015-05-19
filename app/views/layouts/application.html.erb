@@ -18,10 +18,7 @@
   ga('create', 'UA-60948534-1', 'auto');
   ga('send', 'pageview');
 
-  <!-- BOOTSTRAP ALERT FADE -->
-  // $('.close').click(function() {
-    $('.alert-success').alert('close').fadeOut();
-  // });
+
 
 </script>
 
@@ -77,7 +74,7 @@
     <% end %>
 	
 	<% if flash[:notice].present? %>
-	  <div class="col-md-10 col-md-offset-1 alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <div class="col-md-10 col-md-offset-1 alert alert-success alert-dismissible text-center fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  	<%= flash[:notice].html_safe %>
 	  </div>
 	<% end %>
