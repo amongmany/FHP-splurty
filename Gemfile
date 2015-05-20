@@ -45,6 +45,13 @@ gem "factory_girl_rails", "~> 4.0"
 # Obscenity Gem
 gem 'obscenity'
 
+# Twitter Gems
+gem 'twitter', '~> 5.3.1'
+gem 'omniauth-twitter', '~> 1.0.1'
+
+# Figaro Gem (to allow for environmental variables instead of publishing API keys)
+gem 'figaro', '>= 1.0.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
