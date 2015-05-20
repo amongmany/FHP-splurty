@@ -42,6 +42,9 @@ gem 'autoprefixer-rails'
 
 gem "factory_girl_rails", "~> 4.0"
 
+# Obscenity Gem
+gem 'obscenity'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
