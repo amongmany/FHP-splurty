@@ -52,6 +52,14 @@ gem 'omniauth-twitter', '~> 1.0.1'
 # Figaro Gem (to allow for environmental variables instead of publishing API keys)
 gem 'figaro', '>= 1.0.0'
 
+# Active Admin Gem
+gem 'activeadmin', '~> 1.0.0.pre1'
+# Which requires:
+gem 'devise'
+gem 'cancan'
+gem 'draper'
+gem 'pundit'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
