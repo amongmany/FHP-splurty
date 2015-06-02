@@ -13,5 +13,36 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
 //= require_tree .
+
+$(function(){
+	$('#masonry-container').masonry({
+		columnWidth: 375,
+		percentPosition: true,
+		itemSelector: '.item'
+	});
+
+	// Replaces Site header when window loads smaller than 723px
+	if($(window).width() < 723){
+		$('header h1').replaceWith( "<h1>@YKYWAASW</h1>");
+	}
+
+	// Replaces site header when window is resized to be smaller than 723px
+	$(window).resize(function() {
+    if( $(this).width() < 723 ) {
+        	$('header h1').replaceWith( "<h1>@YKYWAASW</h1>");
+    	}
+	});
+
+	// Replaces site header back to default when window is resized bigger than 723px
+	$(window).resize(function() {
+    if( $(this).width() >= 723 ) {
+        	$('header h1').replaceWith( "<h1>You Know You Work at a Startup When...</h1>");
+    	}
+	});
+});

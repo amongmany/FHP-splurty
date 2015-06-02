@@ -1,12 +1,27 @@
-<div class="headline"> 
-	<%= link_to quote_path(@quote.id) do %> 
-	 Enlightened Insight, Number <%= @quote.id %>:
-	 <% end %>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix centered">
+	<div class="submission-box item">
+  		<h2>Share Your Startup Wisdom:</h2>
+  		<%= simple_form_for Quote.new do |f| %>
+    	<%= f.input :saying, label: 'You Know You Work at a Startup When...', placeholder: 'you function on 5 or less hours of sleep, daily.' %>
+    	<%= f.input :author, label: 'Your Name:', placeholder: 'or you could be "Anonymous."' %>
+    	<%= f.submit 'Submit', :class => 'btn btn-danger pull-right' %>
+  		<% end %>
+	</div>
+
+	<% @quote.each do |quote| %>
+		<div class="card item">
+			<div class="headline"> 
+				<%= link_to quote_path(quote.id) do %> 
+				 Insight #<%= quote.id %>:
+				 <% end %>
+			</div>
+
+			<h2 class="intro">
+				<span>You know you work at a startup when...</span>
+			</h2>
+
+			<h1><%= quote.saying %></h1>
+			<h2 class="sign-off pull-right">-<%= quote.author %></h2>
+		</div>
+	<% end %>
 </div>
-
-<h2>
-	<span>You know you work at a startup when...</span>
-</h2>
-
-<h1><%= @quote.saying %></h1>
-<h2 class="pull-right">-<%= @quote.author %></h2>

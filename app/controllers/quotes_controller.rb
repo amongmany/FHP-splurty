@@ -1,7 +1,10 @@
 class QuotesController < ApplicationController
-	def index
-		@quote = Quote.order("RANDOM()").first
+	# def index
+	# 	@quote = Quote.order("RANDOM()").first
+	# end
 
+	def index
+		@quote = Quote.order('id DESC').all
 	end
 
 	def create
@@ -19,6 +22,10 @@ class QuotesController < ApplicationController
 		@quote = Quote.where(:id => params[:id]).first
 		if @quote.blank?
 			render :text => "Not Found", :status => :not_found
+		end
+		respond_to do |format|
+			format.html
+			format.json {render json: @quote}
 		end
 	end
 

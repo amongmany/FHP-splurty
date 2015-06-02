@@ -1,5 +1,6 @@
+require 'obscenity/active_model'
+
 class Quote < ActiveRecord::Base
-	require 'obscenity/active_model'
 	validates :saying, :presence => true, :length => { :maximum => 140, :minimum => 3 }, obscenity: { sanitize: true, replacement: :garbled }
 	validates :author, :presence => true, :length => { :maximum => 50, :minimum => 3}
 

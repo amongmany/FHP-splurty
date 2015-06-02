@@ -1,16 +1,92 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800);
 
+header {
+	height: 70px;
+	color: #ffffff;
+	background: #f0004a;
+	margin: -10px 0 0 0;
+	padding: 10px 0 0 15px;
+}
+
+header h1 {
+	font-size: 36px;
+}
+
+header a {
+	color: #ffffff;
+}
+
+header a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
 .clear {
 	clear:both;
 }
 
-.headline {
-	font-size: 16px;
-	margin-top: 10vh;
-	color: #747474;
-	margin-bottom: 35px;
+.container-fluid {
+	padding: 0 0 0 0;
 }
 
+.centered {
+	margin: 0 auto;
+}
+
+.card {
+	background: #fafafa;
+	margin: 0px;
+	border: 1px solid #ffffff;
+	padding: 15px;
+	width: 375px;
+}
+
+.show-card {
+	background: #fafafa;
+	max-width:80%;
+	border: 1px solid #ffffff;
+}
+
+.about {
+	background: #fafafa;
+	max-width:80%;
+	border: 1px solid #ffffff;
+	padding: 20px;
+}
+
+.about a {
+	color: #f0004a;
+}
+
+.submission-box {
+	margin: 0 0 7px 18px;
+	width: 330px;
+}
+
+.submission-box h1 {
+	margin-bottom: 10px;
+}
+
+.submission-box input {
+	margin-bottom: 10px;
+}
+
+abbr[title] {
+	cursor: default;
+	border-bottom: none;
+	color: #f0004a;
+}
+
+.headline {
+	font-size: 16px;
+	margin-top: 2vh;
+	color: #747474;
+	margin-bottom: 0px;
+}
+
+.headline a {
+	color: #f0004a;
+}
 
 .links {
 	margin-top: -27px;
@@ -21,10 +97,11 @@
 	font-size: 25px;
 	border-bottom: 1px solid #dfdfdf;
 	margin-right: 15px;
+	color: #f0004a;
 }
 
-header {
-	border-top: 20px solid #2965A8;
+body {
+	border-top: 0px solid #f0004a;
 }
 
 hr {
@@ -34,17 +111,71 @@ hr {
 h1 {
 	font-family: 'Raleway', "Helvetica Neue", helvetica sans-serif;
 	font-weight: 800;
-	font-size: 50px;
+	font-size: 24px;
+	margin: 10px 0 40px 0;
 }
 
 h2 {
 	font-family: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 25px;
+	font-size: 18px;
 	font-weight: 400;
+	margin: 3px 0 5px 0;
 }
 
+h2.intro {
+	margin: 10px 0 0 0;
+}
+
+.sign-off {
+	margin: 0 12px 12px 0px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.site-credit {
+	font-size: 11px;
+	font-style: italic;
+	margin-top: 18px;
+}
+
+.site-credit a {
+	color: #f0004a;
+}
+
+.navbar-default {
+	border-color: #ffffff;
+}
+
+.navbar-fixed-bottom {
+	border-width: 2px 0 0;
+}
+
+.social {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.social-button {
+	width: 28px;
+	margin-top: 11px;
+}
+
+.glyphicon {
+	top:12px;
+	margin-right: 12px;
+	color: black;
+	font-size:20px;
+}
 .footer-buttons {
 	margin-top: 25px;
+}
+
+.btn {
+	border-radius:0;
+	background-color: #f0004a;
+
 }
 
 .btn-lg {
@@ -58,26 +189,22 @@ h2 {
   font-size: 18px;
 }
 
-.footer-blurb {
-	font-family: "Helvetica Neue", helvetica, sans-serif;
-  	font-style: none;
+.form-control {
+	border-radius: 0;
+	box-shadow: none;
 }
 
-@media (max-width: 750px) {
-.headline {
-	font-size: 20px;
-	margin-top: 1vh;
+#masonry-container {
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
-h1 {
-	font-size: 40px;
-}
-h2 {
-	font-size: 24px;
-}
-.slogan {
-	font-size:20px;
-}
-.footer-blurb {
-	font-size: 12px;
-}
-}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
