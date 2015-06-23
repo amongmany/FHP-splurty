@@ -43,8 +43,7 @@ header a:hover {
 
 .show-card {
 	background: #fafafa;
-	max-width:80%;
-	border: 1px solid #ffffff;
+	padding: 15px;
 }
 
 .about {
@@ -208,3 +207,12 @@ h2.intro {
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+@media (max-width: 640px) {
+	img.back {
+		width: 45px;
+	}
+	img.next {
+		width: 45px;
+	}
+}

@@ -5,6 +5,7 @@
   <title>You Know You Work at a Startup When...</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
+  <script src="http://desandro.github.io/masonry/jquery.masonry.min.js"></script>
   <%= csrf_meta_tags %>
 
 
@@ -17,8 +18,6 @@
 
   ga('create', 'UA-60948534-1', 'auto');
   ga('send', 'pageview');
-
-
 
 </script>
 
@@ -38,7 +37,7 @@
 			<%= flash[:error].html_safe %>
 		</div>
     <% end %>
-	
+
     <% if flash[:alert].present? %>
 		<div class="col-md-10 col-md-offset-1 alert alert-danger text-center">
 			<%= flash[:alert].html_safe %>
@@ -50,7 +49,7 @@
 	  	<%= flash[:notice].html_safe %>
 	  </div>
 	<% end %>
-	
+
 	<%= yield %>
 </div>
 
